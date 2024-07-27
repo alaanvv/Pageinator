@@ -3,6 +3,7 @@
 - [Components](#components)
     - [TopBar](#topbar)
     - [TextSection](#textsection)
+- [Todo](#todo)
 
 # Components
 
@@ -54,3 +55,7 @@
   tac: text align center
   tae: text align end
 ```
+
+# Todo
+
+- [ ] Make TextSection responsive
