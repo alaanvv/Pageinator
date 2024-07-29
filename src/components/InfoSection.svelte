@@ -4,8 +4,8 @@
   {/if}
 
   <div class='front'>
-    <h1> {title} </h1>
-    <p> {description} </p>
+    {#if title} <h1> {title} </h1> {/if}
+    {#if description} <p> {description} </p> {/if}
     {#if button_text && button_action}
       <button on:click={button_action}> {button_text} </button>
     {/if}

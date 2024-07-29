@@ -2,24 +2,11 @@
 
 <InfoSection title={text_sections[0].title} description={text_sections[0].description} class='full blur' background='/assets/img/placeholder.webp' button_text='Button' button_action={console.log} />
 <InfoSection title={text_sections[0].title} description={text_sections[0].description} class='right alt tae' />
-
-<section class='menu fh'>
-  <div class='titled-text tac'>
-    <h1> Lorem ipsum </h1>
-    <p>
-      Repellat eum et dolorum cumque quaerat voluptas aliquam.
-      Hic impedit alias consectetur fugiat iste autem nisi.
-      Voluptatibus qui sunt delectus illo ut consequatur.
-      Quia quisquam qui iure assumenda.
-      Quam dolorem minima sequi.
-    </p>
-  </div>
-
-  <img src='https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png' alt='something'>
-</section>
+<FAQSection  title='FAQ' {faqs} />
 
 <script>
   import InfoSection from './components/InfoSection.svelte'
+  import FAQSection  from './components/FAQSection.svelte'
   import TopBar      from './components/TopBar.svelte'
 
   const items = [
@@ -34,10 +21,19 @@
     { href: '#', icon: '/assets/img/youtube.webp'  }
   ]
 
-  const text_sections = [
+  const text_sections = [{
+    title: 'Hello world!',
+    description: 'Repellat eum et dolorum cumque quaerat voluptas aliquam. \nHic impedit alias consectetur fugiat iste autem nisi. \nVoluptatibus qui sunt delectus illo ut consequatur. \nQuia quisquam qui iure assumenda. \nQuam dolorem minima sequi.'
+  }]
+
+  const faqs = [
     {
-      title: 'Hello world!',
-      description: 'Repellat eum et dolorum cumque quaerat voluptas aliquam. \nHic impedit alias consectetur fugiat iste autem nisi. \nVoluptatibus qui sunt delectus illo ut consequatur. \nQuia quisquam qui iure assumenda. \nQuam dolorem minima sequi.'
+      question: "What is your return policy?",
+      answer: "Our return policy allows returns within 30 days of purchase."
+    },
+    {
+      question: "Do you offer customer support?",
+      answer: "Yes, we offer 24/7 customer support via phone, email, and live chat."
     }
   ]
 </script>
@@ -91,28 +87,5 @@
 
   :global(.tas) { text-align: start;  }
   :global(.tac) { text-align: center; }
-  :global(.tas) { text-align: end;    }
-
-  section {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    padding: 5em;
-  }
-
-  img {
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-
-    box-shadow: var(--sh0);
-  }
-
-  .menu {
-    margin-top: 2em;
-    font-size: 1.5em;
-  }
+  :global(.tae) { text-align: end;    }
 </style>
