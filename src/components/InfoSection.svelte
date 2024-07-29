@@ -6,11 +6,14 @@
   <div class='front'>
     <h1> {title} </h1>
     <p> {description} </p>
+    {#if button_text && button_action}
+      <button on:click={button_action}> {button_text} </button>
+    {/if}
   </div>
 </section>
 
 <script>
-  export let title, description, background
+  export let title, description, background, button_text, button_action
   export {clazz as class}
   let clazz = ''
 </script>
@@ -57,12 +60,49 @@
   .blur .background { filter: blur(var(--blur)); }
 
   h1 { font-family: var(--f-title); }
+
   p  {
     font-family: var(--f-description);
     white-space: preserve;
   }
 
+  button {
+    margin-top: 1.5em;
+    border: 0;
+    padding: 0.7em 1em;
+    border-radius: var(--br-button);
+
+    background: var(--bg0-button);
+    box-shadow: var(--sh-button);
+    cursor: pointer;
+
+    font-family: var(--f-button);
+    color: var(--fg0-button);
+    font-size: 1.1em;
+  }
+  .alt button {
+    background: var(--bg1-button);
+    color: var(--bg1-button);
+  }
+
   .front {
     z-index: 2;
+  }
+
+  @media (max-width: 800px) {
+    .max50 div { max-width: 100%; }
+    .max60 div { max-width: 100%; }
+    .max70 div { max-width: 100%; }
+    .max80 div { max-width: 100%; }
+
+    section { padding: 3em; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 1em; }
+  }
+
+  @media (max-width: 400px) {
+    section { font-size: 1.3em; }
   }
 </style>

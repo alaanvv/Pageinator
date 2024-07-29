@@ -2,7 +2,7 @@
 
 - [Components](#components)
     - [TopBar](#topbar)
-    - [TextSection](#textsection)
+    - [InfoSection](#infosection)
 - [Todo](#todo)
 
 # Components
@@ -33,7 +33,7 @@
   compact: compact distribution
 ```
 
-## TextSection
+## InfoSection
 
 - Props
 ```
@@ -58,4 +58,4 @@
 
 # Todo
 
-- [ ] Make TextSection responsive
+- [x] Make InfoSection responsive

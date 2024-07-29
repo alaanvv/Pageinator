@@ -1,7 +1,7 @@
 <TopBar icon='/assets/img/facebook.webp' name='Seguro' {items} {socials} class='compact right' />
 
-<TextSection title={text_sections[0].title} description={text_sections[0].description} class='full blur' background='/assets/img/placeholder.webp' />
-<TextSection title={text_sections[0].title} description={text_sections[0].description} class='right alt tae' />
+<InfoSection title={text_sections[0].title} description={text_sections[0].description} class='full blur' background='/assets/img/placeholder.webp' button_text='Button' button_action={console.log} />
+<InfoSection title={text_sections[0].title} description={text_sections[0].description} class='right alt tae' />
 
 <section class='menu fh'>
   <div class='titled-text tac'>
@@ -19,7 +19,7 @@
 </section>
 
 <script>
-  import TextSection from './components/TextSection.svelte'
+  import InfoSection from './components/InfoSection.svelte'
   import TopBar      from './components/TopBar.svelte'
 
   const items = [
@@ -64,6 +64,13 @@
 
     --f-title: var(--f0);
     --f-description: var(--f0);
+    --f-button: var(--f0);
+    --bg0-button: var(--fg0);
+    --bg1-button: var(--fg1);
+    --fg0-button: var(--bg0);
+    --fg1-button: var(--bg1);
+    --sh-button: var(--sh0);
+    --br-button: 80px;
   }
 
   :global(*) {
@@ -107,16 +114,5 @@
   .menu {
     margin-top: 2em;
     font-size: 1.5em;
-  }
-
-  .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .gallery img {
-    max-width: 300px;
-    margin-bottom: 3em;
   }
 </style>
